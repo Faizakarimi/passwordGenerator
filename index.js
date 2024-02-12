@@ -7,6 +7,7 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
     "/"];
 
     let password = "";
+    let passwordLength = 8;
 
     for(let i = 0; i <8; i++){
         let randomIndex = Math.floor(Math.random() * characters.length);
@@ -15,3 +16,6 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
     }
 
     console.log(password)
+
+    // password lenght using option element is html
+    // google for copy on click in js
