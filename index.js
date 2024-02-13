@@ -6,16 +6,26 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
     ".", "?",
     "/"];
 
+    let passwordContainerEl = document.getElementById("passwordContainer");
+    let passwordGeneraterEl = document.getElementById("passwordGeneratorBtn");
+
     let password = "";
-    let passwordLength = 8;
+    let passwordLength = 12;
 
-    for(let i = 0; i <8; i++){
-        let randomIndex = Math.floor(Math.random() * characters.length);
-        password += characters[randomIndex];
-        // console.log(characters[randomIndex]);
+
+    function generatePassword(){
+        
+        for(let i = 0; i < passwordLength; i++){
+            let randomIndex = Math.floor(Math.random() * characters.length);
+            password += characters[randomIndex];
+           
+        }
+        
+        passwordContainerEl.textContent = password;
+        password = "";
+
     }
-
-    console.log(password)
-
-    // password lenght using option element is html
-    // google for copy on click in js
+    passwordGeneraterEl.addEventListener("click", function(){
+        generatePassword();
+       
+    });
