@@ -49,7 +49,7 @@ h1 {
   align-items: center;
 }
 
-#passwordGeneratorBtn {
+#passwordGeneratorBtn, #copyBtn{
   height: 42px;
   width: 191px;
   background-color: #10b981;
@@ -59,6 +59,10 @@ h1 {
   margin-top: 40px;
   display: block;
   margin-bottom: 10px;
+}
+#passwordGeneratorBtn:hover, #copyBtn:hover{
+    background-color: #064e3b;
+    font-weight: bold;
 }
 
 #passwordContainer {
