@@ -6,26 +6,36 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
     ".", "?",
     "/"];
 
-    let passwordContainerEl = document.getElementById("passwordContainer");
-    let passwordGeneraterEl = document.getElementById("passwordGeneratorBtn");
+let passwordContainerEl = document.getElementById("passwordContainer");
+let passwordGeneraterEl = document.getElementById("passwordGeneratorBtn");
+let copyButton = document.getElementById("copyBtn");
 
-    let password = "";
-    let passwordLength = 12;
+let password = "";
+let passwordLength = 12;
 
+// Function for Generating Password
+function generatePassword() {
 
-    function generatePassword(){
-        
-        for(let i = 0; i < passwordLength; i++){
-            let randomIndex = Math.floor(Math.random() * characters.length);
-            password += characters[randomIndex];
-           
-        }
-        
-        passwordContainerEl.textContent = password;
-        password = "";
+    for (let i = 0; i < passwordLength; i++) {
+        let randomIndex = Math.floor(Math.random() * characters.length);
+        password += characters[randomIndex];
 
     }
-    passwordGeneraterEl.addEventListener("click", function(){
-        generatePassword();
-       
-    });
+
+    passwordContainerEl.textContent = password;
+    password = "";
+
+}
+
+// Function to Copy the Password
+function copyPassword() {
+    let passwordText = document.getElementById("passwordContainer").innerText;
+    navigator.clipboard.writeText(passwordText);
+    alert('Password copied to clipboard');
+}
+
+// Handle click events
+
+passwordGeneraterEl.addEventListener("click", generatePassword)
+copyButton.addEventListener("click", copyPassword);
+
