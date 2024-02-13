@@ -1,0 +1,88 @@
+body {
+  font-family: "Karla", sans-serif;
+  height: 100vh;
+  width: auto;
+}
+
+/* Typography */
+h1 {
+  font-size: 40px;
+}
+
+#firstText {
+  color: #ffffff;
+  display: block;
+}
+
+#greenText {
+  color: #4adf86;
+}
+
+#supportingText {
+  color: #d5d4d8;
+  font-size: 18px;
+  line-height: 1px;
+}
+
+/* Layout */
+
+.container {
+  width: 678px;
+  height: 678px;
+  background-color: #1c1c1c;
+  margin: 0 auto;
+  padding-top: 30px;
+  border: 5px solid #064e3b;
+  border-radius: 10px;
+}
+
+.generator-container {
+  width: 550px;
+  height: 550px;
+  background-color: #1f2937;
+  margin: 40px auto;
+  border: 3px solid #d5d4d8;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#passwordGeneratorBtn {
+  height: 42px;
+  width: 191px;
+  background-color: #10b981;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  margin-top: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#passwordContainer {
+  border-bottom: 2px solid #2f3e53;
+  width: 350px;
+  margin: 30px 0;
+  display: inline-block;
+}
+
+#passwordContainer,
+.examples {
+  color: #55f991;
+}
+
+.examples {
+  display: inline-block;
+  width: 180px;
+  height: 35px;
+  font-size: 16px;
+  background-color: #273549;
+  border: 1px solid #ffffff;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding-top: 10px;
+}
